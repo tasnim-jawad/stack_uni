@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stack Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Operations</h1>
+        <div class="pillar">
+            <div class="books" id="books"></div>
+            <div class="base"></div>
+        </div>
+        <div class="operations">
+            <input type="number" id="bookName" placeholder="Enter book number (1-99)" >
+            <button onclick="putBook()">Insertion: push()</button>
+            <button onclick="pickBook()">Deletion: pop()</button>
+            <button onclick="peekBook()">Peek Operation</button>
+            <button onclick="isEmpty()">isEmpty</button>
+            <button onclick="isFull()">isFull</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
