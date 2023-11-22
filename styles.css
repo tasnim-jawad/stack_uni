@@ -10,7 +10,7 @@
     background-color: #ddd;
     margin: 0 auto;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: background-color 0.3s ease-in-out;
     margin-bottom: 50px;
 }
@@ -45,6 +45,20 @@
     justify-content: center;
     position: relative;
     
+}
+
+.books .book:first-child::before {
+    content: "TOP-->";
+    position: absolute;
+    left: 50%;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent;
+    left: -115px;
+    font-size: 30px;
+    transform: rotate(0deg);
+    color: red;
+    font-weight: 800;
 }
 
 .book span {

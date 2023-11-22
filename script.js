@@ -1,24 +1,16 @@
 const books = [];
 const MAX_SIZE = 5;
 
-function putBook() {
-    const inputElements = document.querySelectorAll('.bookName');
-    // console.log("Input Values:", inputElements);
-    inputElements.forEach(){
-
-    }
-    const bookName = Array.from(inputElements).map(input => input.value);
-    console.log("Input Values:", input.value);
-
-    if (bookName !== '' && books.length < MAX_SIZE) {
-        books.unshift(bookName); // Adds to the beginning of the array (top of the pillar)
+function putBook(bookValue) {
+    if (bookValue && books.length < MAX_SIZE) {
+        books.unshift(bookValue); // Add the clicked value to the beginning of the array (top of the pillar)
         displayBooks();
         animateBook('book-added');
+    } else if (!bookValue) {
+        alert('Please select a valid book!');
     } else {
-        alert('Please enter a book name or Pillar is full!');
+        alert('Pillar is full!');
     }
-    // const book = document.querySelector('.bookName');
-    // book.value = '';
 }
 
 function pickBook() {
@@ -49,7 +41,7 @@ function animateBook(animationClass) {
 
 function peekBook() {
     if (books.length > 0) {
-        alert('Top book: ' + books[books.length - 1]);
+        alert('Top book: ' + books[0]);
     } else {
         alert('Pillar is empty!');
     }
