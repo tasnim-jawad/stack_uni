@@ -13,12 +13,23 @@
             <div class="base"></div>
         </div>
         <div class="operations">
-            <input type="number" id="bookName" placeholder="Enter book number (1-99)" >
+
+            <button class="btn btn-danger mb-2 bookName" value="A" onclick="putBook()">A</button>
+            <button class="btn btn-warning mb-2 bookName" value="B" onclick="putBook()">B</button>
+            <button class="btn btn-success mb-2 bookName" value="C" onclick="putBook()">C</button>
+            <button class="btn btn-info mb-2 bookName" value="D" onclick="putBook()">D</button>
+            <button class="btn btn-dark mb-2 bookName" value="E" onclick="putBook()">E</button>
+
+
+
+
+<!--            <input type="number" id="bookName" placeholder="Enter book number (1-99)" >-->
             <button onclick="putBook()">Insertion: push()</button>
             <button onclick="pickBook()">Deletion: pop()</button>
             <button onclick="peekBook()">Peek Operation</button>
             <button onclick="isEmpty()">isEmpty</button>
             <button onclick="isFull()">isFull</button>
+
         </div>
     </div>
 

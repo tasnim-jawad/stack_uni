@@ -2,7 +2,14 @@ const books = [];
 const MAX_SIZE = 5;
 
 function putBook() {
-    const bookName = document.getElementById('bookName').value.trim();
+    const inputElements = document.querySelectorAll('.bookName');
+    // console.log("Input Values:", inputElements);
+    inputElements.forEach(){
+
+    }
+    const bookName = Array.from(inputElements).map(input => input.value);
+    console.log("Input Values:", input.value);
+
     if (bookName !== '' && books.length < MAX_SIZE) {
         books.unshift(bookName); // Adds to the beginning of the array (top of the pillar)
         displayBooks();
@@ -10,7 +17,8 @@ function putBook() {
     } else {
         alert('Please enter a book name or Pillar is full!');
     }
-    document.getElementById('bookName').value = '';
+    // const book = document.querySelector('.bookName');
+    // book.value = '';
 }
 
 function pickBook() {
